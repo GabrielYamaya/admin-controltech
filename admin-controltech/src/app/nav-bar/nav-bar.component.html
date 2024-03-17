@@ -1,0 +1,129 @@
+<style>
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+
+    .NavBar-all {
+        position: relative;
+    }
+
+    .upBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Certifique-se de que a barra superior esteja acima da barra lateral */
+    }
+
+    .NavBar {
+        position: fixed;
+        top: 62px; /* Altura da barra superior */
+        left: 0;
+        height: calc(100% - 62px); /* Ajuste para a altura da barra superior */
+        width: 250px; /* largura da barra lateral */
+        background-color: #333; /* cor de fundo da barra lateral */
+        color: #fff; /* cor do texto */
+        display: flex;
+        flex-direction: column;
+        z-index: 100; /* Certifique-se de que a barra lateral esteja abaixo da barra superior */
+    }
+
+    .content {
+        margin-left: 250px; /* largura da barra lateral */
+        margin-top: 62px; /* Altura da barra superior */
+    }
+
+    .NavBar mat-toolbar {
+        background-color: #444; /* cor de fundo da barra horizontal */
+        color: #fff; /* cor do texto da barra horizontal */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .NavBar span {
+        margin: 0 10px;
+    }
+
+    .NavBar mat-icon-button {
+        color: #fff; /* cor dos ícones */
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+
+    .menu-item:hover {
+        background-color: #555; /* cor de fundo ao passar o mouse */
+    }
+</style>
+
+<div class="NavBar-all">
+    <div class="upBar">
+        <mat-toolbar>
+            <span>ControlTech</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon></mat-icon>
+            </button>
+        </mat-toolbar>
+    </div>
+    <div class="NavBar">
+        <div class="menu-item" aria-label="Dashboard">
+            <button mat-icon-button class="example-icon" aria-label="Dashboard">
+                <mat-icon>dashboard</mat-icon>
+            </button>
+            Dashboard
+        </div>
+        <div class="menu-item" aria-label="Ambientes">
+            <button mat-icon-button class="example-icon" aria-label="Ambientes">
+                <mat-icon>business</mat-icon>
+            </button>
+            Ambientes
+        </div>
+        <div class="menu-item" aria-label="Licenças">
+            <button mat-icon-button class="example-icon" aria-label="Licenças">
+                <mat-icon>receipt</mat-icon>
+            </button>
+            Licenças
+        </div>
+        <div class="menu-item" aria-label="Cadastros">
+            <button mat-icon-button class="example-icon" aria-label="Cadastros">
+                <mat-icon>list</mat-icon>
+            </button>
+            Cadastros
+            <div class="submenu">
+                <div class="menu-item" aria-label="Ativos">
+                    <button mat-icon-button class="example-icon" aria-label="Ativos">
+                        <mat-icon>devices</mat-icon>
+                    </button>
+                    Ativos
+                </div>
+                <div class="menu-item" aria-label="Softwares">
+                    <button mat-icon-button class="example-icon" aria-label="Softwares">
+                        <mat-icon>cloud</mat-icon>
+                    </button>
+                    Softwares
+                </div>
+                <div class="menu-item" aria-label="Funcionários">
+                    <button mat-icon-button class="example-icon" aria-label="Funcionários">
+                        <mat-icon>people</mat-icon>
+                    </button>
+                    Funcionários
+                </div>
+                <div class="menu-item" aria-label="Local">
+                    <button mat-icon-button class="example-icon" aria-label="Local">
+                        <mat-icon>place</mat-icon>
+                    </button>
+                    Local
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <!-- Conteúdo principal aqui -->
+</div>
