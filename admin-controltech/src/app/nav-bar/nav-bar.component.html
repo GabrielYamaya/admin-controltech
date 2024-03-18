@@ -1,6 +1,9 @@
 <div class="NavBar-all">
     <div class="upBar">
         <mat-toolbar>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="toggleNav()">
+                <mat-icon>menu</mat-icon>
+            </button>
             <span>ControlTech</span>
             <span class="example-spacer"></span>
             <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -12,7 +15,7 @@
         </mat-toolbar>
     </div>
     <div class="NavBar" [ngClass]="{'navOpen': isNavOpen}" >
-        <button (click)="toggleNav()">Toggle Nav</button>
+        
         <div class="menu-item" aria-label="Dashboard">
             <button mat-icon-button class="example-icon" aria-label="Dashboard">
                 <mat-icon>dashboard</mat-icon>

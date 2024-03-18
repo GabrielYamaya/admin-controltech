@@ -19,7 +19,7 @@
     position: fixed;
     top: 62px;
     /* Altura da barra superior */
-    left: 0;
+    left: -250px;
     height: calc(100% - 62px);
     /* Ajuste para a altura da barra superior */
     width: 250px;
@@ -36,7 +36,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
+.NavBar.navOpen {
+    left: 0; /* Abre a barra de navegação */
+}
 .content {
     margin-left: 250px;
     /* largura da barra lateral */
