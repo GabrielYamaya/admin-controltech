@@ -1,1 +1,5 @@
 <app-nav-bar></app-nav-bar>
+<div [ngClass]="{'contentPushed': isNavOpen}">
+    <h1>Ola Porra!</h1>
+    <router-outlet></router-outlet>
+  </div>

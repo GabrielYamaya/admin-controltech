@@ -11,7 +11,8 @@
             </button>
         </mat-toolbar>
     </div>
-    <div class="NavBar">
+    <div class="NavBar" [ngClass]="{'navOpen': isNavOpen}" >
+        <button (click)="toggleNav()">Toggle Nav</button>
         <div class="menu-item" aria-label="Dashboard">
             <button mat-icon-button class="example-icon" aria-label="Dashboard">
                 <mat-icon>dashboard</mat-icon>
@@ -68,3 +69,4 @@
 <div class="content">
     <!-- Conteúdo principal aqui -->
 </div>
+
