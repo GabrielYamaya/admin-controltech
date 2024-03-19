@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AtivosRoutingModule } from './ativos-routing.module';
 import { AtivosComponent } from './ativos/ativos.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { AtivosComponent } from './ativos/ativos.component';
   ],
   imports: [
     CommonModule,
-    AtivosRoutingModule
+    AtivosRoutingModule,
+    MatTableModule
   ]
 })
 export class AtivosModule { }

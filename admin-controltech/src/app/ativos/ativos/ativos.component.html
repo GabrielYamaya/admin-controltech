@@ -1,0 +1,58 @@
+<div class="headerPage">
+    <h1>Cadastro de ativos</h1>
+
+</div>
+<table mat-table [dataSource]="ativos" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let ativo">{{ativo.id }}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let ativo">{{ativo.nome }}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="qtdEstoque">
+      <th mat-header-cell *matHeaderCellDef>Quantidade Estoque</th>
+      <td mat-cell *matCellDef="let ativo">{{ativo.qtdEstoque }}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="valorItem">
+      <th mat-header-cell *matHeaderCellDef>Valor</th>
+      <td mat-cell *matCellDef="let ativo">{{ativo.valorItem }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="statusAtivo">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let ativo">{{ativo.statusAtivo }}</td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+        mat-row
+        (click)="clickedRows.add(row)"
+        [class.demo-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;"
+    ></tr>
+  </table>
+  
+  <div>
+    <h3>
+      Click Log
+    </h3>
+  </div>
+  
+  @if (!clickedRows.size) {
+    <div>Clicked rows will be logged here</div>
+  }
+  
+  <ul>
+    @for (clickedRow of clickedRows; track clickedRow) {
+      <li>Clicked on {{clickedRow.nome}}</li>
+    }
+  </ul>
