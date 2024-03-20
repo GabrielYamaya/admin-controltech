@@ -1,6 +1,6 @@
-export interface LocalArmazenado {
+export interface SubLocal {
     id: number;
-    nomelocal: string;
+    nomeLocal: string;
     endereco: string;
     descricao: string;
-}
+  }

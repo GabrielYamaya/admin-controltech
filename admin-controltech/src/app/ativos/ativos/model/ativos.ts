@@ -1,10 +1,10 @@
 export interface Ativos {
     id: number;
     nome: string;
-    qtdEstoque: number;
+    qntEstoque: number;
     valorItem: number;
     data_aquisicao: Date;
     statusAtivo: string;
     descricao: string;
-    
+    idLocalArmazenado: number;
 }

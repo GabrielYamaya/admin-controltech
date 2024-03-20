@@ -11,6 +11,7 @@ import { DialogCrudComponent } from './dialog-crud/dialog-crud.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms'; // Importe o FormsModule
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms'; // Importe o FormsModule
     MatDialogModule,
     MatDatepickerModule,
     FormsModule,
+    MatSelectModule
   ]
 })
 export class AtivosModule { }
