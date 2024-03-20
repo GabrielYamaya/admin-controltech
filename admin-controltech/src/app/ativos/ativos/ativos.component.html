@@ -1,8 +1,21 @@
-<div class="headerPage">
-    <h1>Cadastro de ativos</h1>
-
+<div class="headerPage" [ngClass]="{'contentPushed': isNavOpen}">
+  <h1>Cadastro de ativos</h1>
+  <div class="icons">
+    <mat-form-field appearance="fill">
+      <mat-label>Pesquisar</mat-label>
+      <input matInput placeholder="Pesquisar">  
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button mat-icon-button>
+      <mat-icon>filter_list</mat-icon>
+    </button>
+    <button mat-icon-button class="bottaoCreate" (click)="openProductDialog()">
+      <mat-icon>create</mat-icon>
+    </button>
+  </div>
 </div>
-<table mat-table [dataSource]="ativos" class="mat-elevation-z8 demo-table">
+<div class="content">
+  <table mat-table [dataSource]="ativos" class="mat-elevation-z8 demo-table">
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -56,3 +69,5 @@
       <li>Clicked on {{clickedRow.nome}}</li>
     }
   </ul>
+
+</div>

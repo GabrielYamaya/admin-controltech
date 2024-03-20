@@ -1,18 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AtivosRoutingModule } from './ativos-routing.module';
 import { AtivosComponent } from './ativos/ativos.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { DialogCrudComponent } from './dialog-crud/dialog-crud.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FormsModule } from '@angular/forms'; // Importe o FormsModule
 
 @NgModule({
   declarations: [
-    AtivosComponent
+    AtivosComponent,
+    DialogCrudComponent,
+    
   ],
   imports: [
     CommonModule,
     AtivosRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    FormsModule,
   ]
 })
 export class AtivosModule { }

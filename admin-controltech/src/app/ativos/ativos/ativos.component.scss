@@ -16,3 +16,46 @@
   .demo-row-is-clicked {
     font-weight: bold;
   }
+  
+  .content {
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  .headerPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com transparência */
+    border-radius: 0; /* Remover bordas arredondadas */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: absolute; /* Fixar no topo */
+    top: 8%; /* Posicionar no topo */
+    left: 0; /* Posicionar no lado esquerdo */
+    width: 98%; /* Cobrir a largura da tela */
+    height: 60px; /* Altura fixa para centralizar verticalmente os itens */
+  }
+  h1 {
+    margin-left: 250px;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-form-field {
+    padding-top: 20px;
+    margin-right: 10px;
+  }
+  
+  mat-icon {
+    cursor: pointer;
+  }
+  .bottaoCreate {
+    
+    width: 80px;
+    height: 80px;
+  }
