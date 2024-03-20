@@ -1,0 +1,458 @@
+/* Card */
+
+position: relative;
+width: 481px;
+height: 700px;
+left: 333px;
+top: 220px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: rgba(226, 226, 226, 0.5);
+opacity: 0.84;
+border-radius: 25px;
+
+
+/* Vector 1 */
+
+position: absolute;
+width: 411px;
+height: 86px;
+left: 58px;
+top: 607px;
+
+opacity: 0.34;
+border: 1px solid rgba(61, 61, 61, 0.7);
+border-radius: 13px;
+
+
+/* Prédio L */
+
+position: absolute;
+width: 274px;
+left: calc(50% - 274px/2 - 71.5px);
+top: 0%;
+bottom: 79%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 77px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Ativos : */
+
+position: absolute;
+width: 137px;
+left: calc(50% - 137px/2 - 140px);
+top: 30.57%;
+bottom: 63.71%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Funcionários : */
+
+position: absolute;
+width: 225px;
+left: calc(50% - 225px/2 - 96px);
+top: 41%;
+bottom: 53.29%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* SubLocais */
+
+position: absolute;
+width: 120px;
+left: calc(50% - 120px/2 - 148.5px);
+top: 61%;
+bottom: 33.14%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* R$ 567.342,00 */
+
+position: absolute;
+width: 337px;
+left: calc(50% - 337px/2 + 60px);
+top: 89%;
+bottom: 1%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 58px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* 234 */
+
+position: absolute;
+width: 93px;
+left: calc(50% - 93px/2 + 150px);
+top: 28.86%;
+bottom: 61.14%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 58px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* 12 */
+
+position: absolute;
+width: 102px;
+right: 0px;
+top: 38.86%;
+bottom: 51.14%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 58px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Reparo : */
+
+position: absolute;
+width: 225px;
+left: calc(50% - 225px/2 - 96px);
+top: 51%;
+bottom: 43.29%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* 2 */
+
+position: absolute;
+width: 38px;
+right: 44px;
+top: 48.86%;
+bottom: 41.14%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 58px;
+display: flex;
+align-items: center;
+
+color: #3D3D3D;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Sublocais */
+
+position: absolute;
+width: 417px;
+height: 86px;
+left: 32px;
+top: 466px;
+
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 417px;
+height: 86px;
+left: 32px;
+top: 466px;
+
+background: rgba(154, 154, 154, 0.63);
+opacity: 0.54;
+border-radius: 6px;
+
+
+/* subLocais */
+
+position: absolute;
+width: 58px;
+height: 19px;
+left: 40px;
+top: 477px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 58px;
+height: 18px;
+left: 40px;
+top: 477px;
+
+background: #000000;
+border-radius: 2px;
+
+
+/* L34 */
+
+position: absolute;
+width: 30px;
+height: 19px;
+left: 45px;
+top: 477px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #F0F0F0;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 12px;
+height: 12px;
+left: 83px;
+top: 480px;
+
+background: #00CE46;
+
+
+/* subLocais */
+
+position: absolute;
+width: 195px;
+height: 51px;
+left: 40px;
+top: 477px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 58px;
+height: 18px;
+left: 108px;
+top: 477px;
+
+background: #000000;
+border-radius: 2px;
+
+
+/* L34 */
+
+position: absolute;
+width: 30px;
+height: 19px;
+left: 113px;
+top: 477px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #F0F0F0;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 12px;
+height: 12px;
+left: 151px;
+top: 480px;
+
+background: #00CE46;
+
+
+/* subLocais */
+
+position: absolute;
+width: 195px;
+height: 51px;
+left: 40px;
+top: 477px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 58px;
+height: 18px;
+left: 177px;
+top: 477px;
+
+background: #000000;
+border-radius: 2px;
+
+
+/* L34 */
+
+position: absolute;
+width: 30px;
+height: 19px;
+left: 182px;
+top: 477px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #F0F0F0;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 12px;
+height: 12px;
+left: 220px;
+top: 480px;
+
+background: #00CE46;
+
+
+/* subLocais */
+
+position: absolute;
+width: 137px;
+height: 19px;
+left: 40px;
+top: 509px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 137px;
+height: 18px;
+left: 40px;
+top: 510px;
+
+background: #000000;
+border-radius: 2px;
+
+
+/* Laboratório X */
+
+position: absolute;
+width: 108px;
+height: 19px;
+left: 44px;
+top: 509px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #F0F0F0;
+
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 12px;
+height: 12px;
+left: 161.5px;
+top: 513px;
+
+background: #CE0000;

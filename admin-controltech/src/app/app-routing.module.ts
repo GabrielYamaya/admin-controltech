@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: 'ativos',
     loadChildren: () => import('./ativos/ativos.module').then(m => m.AtivosModule)
+  },
+  {
+    path: 'ambientes',
+    loadChildren: () => import('./ambientes/ambientes.module').then(m => m.AmbientesModule)
   }
 ];
 

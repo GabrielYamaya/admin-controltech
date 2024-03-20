@@ -10,11 +10,15 @@ import {MatButtonModule} from '@angular/material/button';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CategoriaServiceService } from './services/categoria-service.service';
 import { AtivosService } from './services/ativos.service';
+import { AmbientesComponent } from './ambientes/ambientes/ambientes.component';
+import { CardsComponent } from './ambientes/cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    AmbientesComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { AtivosService } from './services/ativos.service';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     provideClientHydration(),
