@@ -4,6 +4,8 @@ import { Ativos } from '../ativos/model/ativos';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { Categoria } from '../ativos/model/categoria';
 import { CategoriaServiceService } from '../../services/categoria-service.service';
+import { Users } from '../ativos/model/users';
+import { UsersService } from '../../services/users.service';
 @Component({
   selector: 'app-dialog-crud',
   templateUrl: './dialog-crud.component.html',
@@ -11,6 +13,8 @@ import { CategoriaServiceService } from '../../services/categoria-service.servic
   providers: [provideNativeDateAdapter()]
 })
 export class DialogCrudComponent implements OnInit {
+  selectedType: String = '';
+
   formData: any = {    id: 1, 
     nome: 'Produto A', 
     qntEstoque: 10, 
@@ -19,6 +23,14 @@ export class DialogCrudComponent implements OnInit {
     data_aquisicao: new Date('2022-01-01'),
     descricao: 'Este é o Produto A',
     idLocalArmazenado: 0};
+  formDataUser: any = {
+    id: 1,
+    nome: '',
+    login: '',
+    user_password: '',
+    endereco: ''
+  };
+  usuarios: Users[] = [];
   categorias: Categoria[] = [];
   fornecedores: any[] = [];
   isAtivoFisico: boolean = false;
@@ -26,13 +38,15 @@ export class DialogCrudComponent implements OnInit {
   constructor(
     public dialogRef : MatDialogRef<DialogCrudComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private categoriaService: CategoriaServiceService
+    private categoriaService: CategoriaServiceService,
+    private userService: UsersService
   ){
 
   }
 
   ngOnInit(): void{
     this.getCategorias();
+    this.getUsers();
   }
   getCategorias(): void {
     this.categoriaService.getCategorias().subscribe(categorias => {
@@ -40,6 +54,13 @@ export class DialogCrudComponent implements OnInit {
       console.log(this.categorias);
     })
   }
+  getUsers(): void {
+    this.userService.getUsers().subscribe(usuarios => {
+      this.usuarios = usuarios;
+      console.log(this.usuarios);
+    })
+  }
+
   closeDialog(): void {
     this.dialogRef.close();
   }

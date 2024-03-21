@@ -12,7 +12,7 @@ import { CategoriaServiceService } from './services/categoria-service.service';
 import { AtivosService } from './services/ativos.service';
 import { AmbientesComponent } from './ambientes/ambientes/ambientes.component';
 import { CardsComponent } from './ambientes/cards/cards.component';
-
+import { UsersService } from './services/users.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import { CardsComponent } from './ambientes/cards/cards.component';
     provideClientHydration(),
     provideAnimationsAsync(),
     CategoriaServiceService,
-    AtivosService
+    AtivosService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })

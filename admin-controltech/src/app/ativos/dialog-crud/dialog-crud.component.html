@@ -33,6 +33,40 @@
       <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</mat-option>
     </mat-select>
   </mat-form-field>
+
+  <!-- Outros campos comuns aqui... -->
+
+  <!-- Caixa de seleção para escolher o tipo de produto -->
+  <mat-form-field appearance="fill">
+    <mat-label>Tipo de Produto</mat-label>
+    <mat-select [(ngModel)]="selectedType" required>
+      <mat-option value="ativoFisico">Ativo Físico</mat-option>
+      <mat-option value="software">Software</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Campos específicos para Ativo Físico -->
+  <div *ngIf="selectedType === 'ativoFisico'">
+    <!-- Campos específicos para Ativo Físico aqui -->
+    <!-- Por exemplo: -->
+  <mat-form-field appearance="fill">
+    <mat-label>Responsavel</mat-label>
+    <mat-select [(ngModel)]="formDataUser.users" required>
+      <mat-option *ngFor="let users of usuarios" [value]="users.id">{{ users.nome }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+  <!-- Campos específicos para Software -->
+  <div *ngIf="selectedType === 'software'">
+    <!-- Campos específicos para Software aqui -->
+    <!-- Por exemplo: -->
+    <mat-form-field appearance="fill">
+      <mat-label>Versão</mat-label>
+      <input matInput placeholder="Versão" [(ngModel)]="formData.versao" required>
+    </mat-form-field>
+    <!-- Outros campos específicos para Software aqui... -->
+  </div>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="closeDialog()">Fechar</button>

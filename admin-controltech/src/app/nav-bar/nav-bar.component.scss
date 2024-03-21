@@ -14,7 +14,14 @@
     z-index: 1000;
     /* Certifique-se de que a barra superior esteja acima da barra lateral */
 }
-
+a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    gap: 10px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
 .NavBar {
     position: fixed;
     top: 62px;
