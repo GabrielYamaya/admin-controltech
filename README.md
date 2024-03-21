@@ -26,9 +26,6 @@ git clone https://github.com/FelipeCherry3/admin-controltech.git
 8.  **Abra seu navegador e vá para:**
 9.  http://localhost:4200/
 
-## Licença
-
-Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT) - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## Contato
 
