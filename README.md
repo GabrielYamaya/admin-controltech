@@ -1,4 +1,4 @@
-#CONTROLTECH ADMIN
+### CONTROLTECH ADMIN
 
 Desenvolvido em Angular, Controltech-Admin é a interface gráfica em ambiente web para um gerenciamento de Ativos e Softwares de maneira intuitíva e flexível 
 
