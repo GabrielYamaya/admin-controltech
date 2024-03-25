@@ -32,4 +32,7 @@ git clone https://github.com/FelipeCherry3/admin-controltech.git
 Para dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 
 - [Felipe elias](mailto:224475@facens.br)
-  
+- [Caio Augusto](mailto:224120@facens.br)
+- [Gabriel Yamaya](mailto:212065@facens.br)
+- [Henrique Módolo](mailto:223865@facens.br)
+- [Luiz Gustavo](mailto:223608@facens.br)
