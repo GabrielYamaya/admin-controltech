@@ -13,16 +13,18 @@ import { AtivosService } from './services/ativos.service';
 import { AmbientesComponent } from './ambientes/ambientes/ambientes.component';
 import { CardsComponent } from './ambientes/cards/cards.component';
 import { UsersService } from './services/users.service';
+import { LoginRoutingModule } from './login/login-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     AmbientesComponent,
-    CardsComponent
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LoginRoutingModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

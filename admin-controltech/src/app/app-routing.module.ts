@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'ambientes',
     loadChildren: () => import('./ambientes/ambientes.module').then(m => m.AmbientesModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   }
 ];
 
