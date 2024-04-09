@@ -15,7 +15,7 @@ import { UsersService } from '../../services/users.service';
 export class DialogCrudComponent implements OnInit {
   selectedType: String = '';
 
-  formData: any = {    id: 1, 
+  formDataAtivo: any = {    id: 1, 
     nome: 'Produto A', 
     qntEstoque: 10, 
     valorItem: 50, 
@@ -29,6 +29,14 @@ export class DialogCrudComponent implements OnInit {
     login: '',
     user_password: '',
     endereco: ''
+  };
+  formDataSoftware: any = {
+    id: 1,
+    versao: '',
+    data_expira: new Date('2022-01-01'),
+    n_licenca: '',
+    tipo_OS: '',
+    id_produto: 0
   };
   usuarios: Users[] = [];
   categorias: Categoria[] = [];

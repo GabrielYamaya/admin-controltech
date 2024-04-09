@@ -13,4 +13,9 @@ export class AtivosService {
     this.baseUrl = this.baseUrl + "/all"
     return this.http.get<any[]>(this.baseUrl);
   }
+
+  saveAtivoFisico(formData: any): Observable<any> {
+    this.baseUrl = this.baseUrl + "/save"
+    return this.http.post<any>(this.baseUrl, formData);
+  }
 }

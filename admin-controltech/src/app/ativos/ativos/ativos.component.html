@@ -56,17 +56,17 @@
   
   <div>
     <h3>
-      Click Log
+      Log
     </h3>
   </div>
   
   @if (!clickedRows.size) {
-    <div>Clicked rows will be logged here</div>
+    <div>Log Produtos</div>
   }
   
   <ul>
     @for (clickedRow of clickedRows; track clickedRow) {
-      <li>Clicked on {{clickedRow.nome}}</li>
+      <li>Selecionado - {{clickedRow.nome}}</li>
     }
   </ul>
 
