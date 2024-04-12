@@ -1,5 +1,5 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar *ngIf="!isNavBarActive"></app-nav-bar>
 
-<div [ngClass]="{'contentPushed': isNavOpen}">
+<div [ngClass]="{'contentPushed': isNavOpen}" >
     <router-outlet></router-outlet>
   </div>
