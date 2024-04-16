@@ -1,17 +1,18 @@
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { CanLoad, Route, UrlSegment, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { NavBarServiceService } from '../nav-bar/nav-bar-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DisableNavBarGuard implements CanActivate {
+export class DisableNavBarGuard implements CanLoad {
 
   constructor(private navBarService: NavBarServiceService, private router: Router) {}
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  canLoad(route: Route, segments: UrlSegment[]): boolean {
     // Desativa a NavBar na rota /login
-    if (state.url === '/login') {
+    const url = segments.map(s => s.path).join('/');
+    if (url === 'login' || url === 'login/cadastrar') {
       this.navBarService.isNavBarActive = false;
     } else {
       this.navBarService.isNavBarActive = true;

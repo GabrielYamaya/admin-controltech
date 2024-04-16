@@ -13,8 +13,9 @@ const routes: Routes = [
     loadChildren: () => import('./ambientes/ambientes.module').then(m => m.AmbientesModule)
   },
   {
-    path: 'login', canActivate: [DisableNavBarGuard],
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+    canLoad: [DisableNavBarGuard]
   }
 ];
 

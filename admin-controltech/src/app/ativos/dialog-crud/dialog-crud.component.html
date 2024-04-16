@@ -14,7 +14,7 @@
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Data Aquisição</mat-label>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="formDataAtivo.data_aquisicao">
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
@@ -29,7 +29,7 @@
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Categoria</mat-label>
-    <mat-select [(ngModel)]="formDataAtivo.categoria" required>
+    <mat-select [(ngModel)]="formDataCategoria.nome" required>
       <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</mat-option>
     </mat-select>
   </mat-form-field>
@@ -51,7 +51,7 @@
     <!-- Por exemplo: -->
   <mat-form-field appearance="fill">
     <mat-label>Responsavel</mat-label>
-    <mat-select [(ngModel)]="formDataUser.users" required>
+    <mat-select [(ngModel)]="formDataFisico.id_usuario" required>
       <mat-option *ngFor="let users of usuarios" [value]="users.id">{{ users.nome }}</mat-option>
     </mat-select>
   </mat-form-field>

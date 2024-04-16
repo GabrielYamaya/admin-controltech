@@ -9,14 +9,13 @@ import { NavBarServiceService } from './nav-bar/nav-bar-service.service'; // Cor
 export class AppComponent {
   title = 'admin-controltech';
   isNavOpen: boolean = false;
-  isNavBarActive: boolean = false;
 
   constructor(private navBarService: NavBarServiceService) {
     this.navBarService.isNavOpen$.subscribe(isOpen => {
       this.isNavOpen = isOpen;
     });    
-    this.navBarService.isNavBarActive$.subscribe(isActive => {
-      this.isNavBarActive = isActive;
-    });
+  }
+  get isNavBarActive(){
+    return this.navBarService.isNavBarActive;
   }
 }

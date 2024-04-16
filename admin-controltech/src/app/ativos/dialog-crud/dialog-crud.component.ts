@@ -6,6 +6,9 @@ import { Categoria } from '../ativos/model/categoria';
 import { CategoriaServiceService } from '../../services/categoria-service.service';
 import { Users } from '../ativos/model/users';
 import { UsersService } from '../../services/users.service';
+import { AtivosService } from '../../services/ativos.service';
+import { AtivoFisico } from '../ativos/model/ativoFisico';
+import { AtivoMiddle } from '../ativos/model/ativoMiddle';
 @Component({
   selector: 'app-dialog-crud',
   templateUrl: './dialog-crud.component.html',
@@ -14,15 +17,35 @@ import { UsersService } from '../../services/users.service';
 })
 export class DialogCrudComponent implements OnInit {
   selectedType: String = '';
+  url: String = ''
 
-  formDataAtivo: any = {    id: 1, 
+  dataMiddle: AtivoMiddle = {
+    ativos: null,
+    ativoFisico: null,
+    software: null
+  };
+
+  formDataAtivo: Ativos = {    
+    id: null,
     nome: 'Produto A', 
     qntEstoque: 10, 
     valorItem: 50, 
     statusAtivo: 'Ativo', 
     data_aquisicao: new Date('2022-01-01'),
     descricao: 'Este é o Produto A',
-    idLocalArmazenado: 0};
+    idLocalArmazenado: 1
+  };
+
+  formDataCategoria: any = {
+    id :0,
+    nome: ""
+  };
+
+  formDataFisico: AtivoFisico = {
+    id_ativo: 0,
+    id_usuario: 0,
+    id_produto: 0,
+  }
   formDataUser: any = {
     id: 1,
     nome: '',
@@ -47,7 +70,8 @@ export class DialogCrudComponent implements OnInit {
     public dialogRef : MatDialogRef<DialogCrudComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private categoriaService: CategoriaServiceService,
-    private userService: UsersService
+    private userService: UsersService,
+    private ativoService: AtivosService
   ){
 
   }
@@ -73,6 +97,18 @@ export class DialogCrudComponent implements OnInit {
     this.dialogRef.close();
   }
   saveProduct(): void {
-    //logica salvar dados
+    this.dataMiddle.ativos = this.formDataAtivo;
+    this.dataMiddle.ativoFisico = this.formDataFisico;
+
+    this.formDataAtivo.data_aquisicao = this.formDataAtivo.data_aquisicao.toISOString();
+    console.log(this.formDataAtivo.data_aquisicao)
+    this.ativoService.saveAtivos(this.formDataAtivo).subscribe(
+      response => {
+        console.log("Salvo",response)
+      },
+      error => {
+        console.error('erro', error)
+      }
+    )
   }
 }

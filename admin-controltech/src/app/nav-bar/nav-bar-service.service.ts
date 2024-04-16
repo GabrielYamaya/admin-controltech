@@ -6,7 +6,16 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class NavBarServiceService {
-  isNavBarActive: boolean = false;
+  private _isNavBarActive: boolean = false;
+
+  get isNavBarActive() {
+    return this._isNavBarActive;
+  }
+
+  set isNavBarActive(value: boolean) {
+    this._isNavBarActive = value;
+  }
+  
   private isNavOpenSubject = new BehaviorSubject<boolean>(false);
   isNavOpen$ = this.isNavOpenSubject.asObservable();
 
