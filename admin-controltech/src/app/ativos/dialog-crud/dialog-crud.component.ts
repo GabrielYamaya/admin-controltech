@@ -43,7 +43,7 @@ export class DialogCrudComponent implements OnInit {
 
   formDataFisico: AtivoFisico = {
     id_ativo: 0,
-    id_usuario: 0,
+    id_user: 0,
     id_produto: 0,
   }
   formDataUser: any = {
@@ -66,6 +66,11 @@ export class DialogCrudComponent implements OnInit {
   fornecedores: any[] = [];
   isAtivoFisico: boolean = false;
 
+  dataToEnviar: AtivoMiddle = {
+    ativos: this.formDataAtivo,
+    ativoFisico: this.formDataFisico,
+    software: null
+  }
   constructor(
     public dialogRef : MatDialogRef<DialogCrudComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -96,13 +101,22 @@ export class DialogCrudComponent implements OnInit {
   closeDialog(): void {
     this.dialogRef.close();
   }
+
   saveProduct(): void {
+    this.dataToEnviar.ativos = this.formDataAtivo;
+    this.dataToEnviar.ativoFisico = this.formDataFisico;
+    this.dataToEnviar.software = this.formDataSoftware;
+    
     this.dataMiddle.ativos = this.formDataAtivo;
     this.dataMiddle.ativoFisico = this.formDataFisico;
 
     this.formDataAtivo.data_aquisicao = this.formDataAtivo.data_aquisicao.toISOString();
     console.log(this.formDataAtivo.data_aquisicao)
-    this.ativoService.saveAtivos(this.formDataAtivo).subscribe(
+    this.dataToEnviar.ativos = this.formDataAtivo;
+    this.dataToEnviar.ativoFisico = this.formDataFisico;
+    this.dataToEnviar.software = this.formDataSoftware;
+    
+    this.ativoService.saveAtivoFisico(this.dataToEnviar).subscribe(
       response => {
         console.log("Salvo",response)
       },
