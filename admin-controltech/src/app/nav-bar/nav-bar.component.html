@@ -1,74 +1,76 @@
-<div class="NavBar-all" >
-    <div class="upBar">
-        <mat-toolbar>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="toggleNav()">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <span>ControlTech</span>
-            <span class="example-spacer"></span>
-            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>settings</mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                <mat-icon></mat-icon>
-            </button>
-        </mat-toolbar>
-    </div>
-    <div class="NavBar" [ngClass]="{'navOpen': isNavOpen}" >
-        
-        <div class="menu-item" aria-label="Dashboard">
-            <button mat-icon-button class="example-icon" aria-label="Dashboard">
-                <mat-icon>dashboard</mat-icon>
-            </button>
-            Dashboard
+<div *ngIf="isNavBarActive">
+    <div class="NavBar-all" >
+        <div class="upBar">
+            <mat-toolbar>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="toggleNav()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>ControlTech</span>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>settings</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon></mat-icon>
+                </button>
+            </mat-toolbar>
         </div>
-        <div class="menu-item" aria-label="Ambientes">
-            <button onclick="window.location.href = '/ambientes';" mat-icon-button class="example-icon" aria-label="Ambientes" >
-                <mat-icon>business</mat-icon>
-            </button>
-            Ambientes
-        </div>
-        <div class="menu-item" aria-label="Licenças">
-            <button mat-icon-button class="example-icon" aria-label="Licenças">
-                <mat-icon>receipt</mat-icon>
-            </button>
-            Licenças
-        </div>
-        <div class="menu-item" aria-label="Cadastros">
-            <button mat-icon-button class="example-icon" aria-label="Cadastros">
-                    <mat-icon>list</mat-icon>
-            </button>
-            Cadastros
-            <div class="submenu">
-                <div class="menu-item" aria-label="Ativos">
-                    <button onclick="window.location.href = '/ativos';" mat-icon-button class="example-icon" aria-label="Ativos">
-                        <mat-icon>devices</mat-icon>
-                    </button>
-                    <a href="/ativos">Ativos</a>
-                </div>
-                <div class="menu-item" aria-label="Softwares">
-                    <button mat-icon-button class="example-icon" aria-label="Softwares">
-                        <mat-icon>cloud</mat-icon>
-                    </button>
-                    Softwares
-                </div>
-                <div class="menu-item" aria-label="Funcionários">
-                    <button mat-icon-button class="example-icon" aria-label="Funcionários">
-                        <mat-icon>people</mat-icon>
-                    </button>
-                    Funcionários
-                </div>
-                <div class="menu-item" aria-label="Local">
-                    <button mat-icon-button class="example-icon" aria-label="Local">
-                        <mat-icon>place</mat-icon>
-                    </button>
-                    Local
+        <div class="NavBar" [ngClass]="{'navOpen': isNavOpen}" >
+            
+            <div class="menu-item" aria-label="Dashboard">
+                <button mat-icon-button class="example-icon" aria-label="Dashboard">
+                    <mat-icon>dashboard</mat-icon>
+                </button>
+                Dashboard
+            </div>
+            <div class="menu-item" aria-label="Ambientes">
+                <button onclick="window.location.href = '/ambientes';" mat-icon-button class="example-icon" aria-label="Ambientes" >
+                    <mat-icon>business</mat-icon>
+                </button>
+                Ambientes
+            </div>
+            <div class="menu-item" aria-label="Licenças">
+                <button mat-icon-button class="example-icon" aria-label="Licenças">
+                    <mat-icon>receipt</mat-icon>
+                </button>
+                Licenças
+            </div>
+            <div class="menu-item" aria-label="Cadastros">
+                <button mat-icon-button class="example-icon" aria-label="Cadastros">
+                        <mat-icon>list</mat-icon>
+                </button>
+                Cadastros
+                <div class="submenu">
+                    <div class="menu-item" aria-label="Ativos">
+                        <button onclick="window.location.href = '/ativos';" mat-icon-button class="example-icon" aria-label="Ativos">
+                            <mat-icon>devices</mat-icon>
+                        </button>
+                        <a href="/ativos">Ativos</a>
+                    </div>
+                    <div class="menu-item" aria-label="Softwares">
+                        <button mat-icon-button class="example-icon" aria-label="Softwares">
+                            <mat-icon>cloud</mat-icon>
+                        </button>
+                        Softwares
+                    </div>
+                    <div class="menu-item" aria-label="Funcionários">
+                        <button mat-icon-button class="example-icon" aria-label="Funcionários">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        Funcionários
+                    </div>
+                    <div class="menu-item" aria-label="Local">
+                        <button mat-icon-button class="example-icon" aria-label="Local">
+                            <mat-icon>place</mat-icon>
+                        </button>
+                        Local
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
-
 <div class="content">
     <!-- Conteúdo principal aqui -->
 </div>

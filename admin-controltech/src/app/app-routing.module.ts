@@ -6,16 +6,18 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'ativos'},
   {
     path: 'ativos',
-    loadChildren: () => import('./ativos/ativos.module').then(m => m.AtivosModule)
+    loadChildren: () => import('./ativos/ativos.module').then(m => m.AtivosModule),
+    canActivate: [DisableNavBarGuard]
   },
   {
     path: 'ambientes',
-    loadChildren: () => import('./ambientes/ambientes.module').then(m => m.AmbientesModule)
+    loadChildren: () => import('./ambientes/ambientes.module').then(m => m.AmbientesModule),
+    canActivate: [DisableNavBarGuard]
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
-    canLoad: [DisableNavBarGuard]
+    canActivate: [DisableNavBarGuard]
   }
 ];
 

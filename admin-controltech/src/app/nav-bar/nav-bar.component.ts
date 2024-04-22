@@ -1,19 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavBarServiceService } from './nav-bar-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
-export class NavBarComponent {
-  isNavOpen: boolean = false; // Definindo a propriedade isNavOpen
-  isActivated: boolean = false; // Definindo a propriedade isActivated
+export class NavBarComponent implements OnInit, OnDestroy {
+  isNavOpen: boolean = false;
+  isActivated: boolean = false;
+  isNavBarActive: boolean | undefined;
+  private subscription!: Subscription;
 
   constructor(private navBarService: NavBarServiceService) {}
+
   toggleNav() {
-    this.isNavOpen = !this.isNavOpen; // Alterando o valor da propriedade ao clicar no botão
-    this.navBarService.toggleNav(); // Chamando o método toggleNav do serviço
-    this.isActivated = !this.isActivated; // Alterando o valor da propriedade no roteamento
+    this.isNavOpen = !this.isNavOpen;
+    this.navBarService.toggleNav();
+    this.isActivated = !this.isActivated;
+  }
+
+  ngOnInit() {
+    this.subscription = this.navBarService.isNavBarActive$.subscribe(
+      isActive => this.isNavBarActive = isActive
+    );
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

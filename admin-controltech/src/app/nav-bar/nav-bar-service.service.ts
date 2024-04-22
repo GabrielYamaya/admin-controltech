@@ -14,15 +14,21 @@ export class NavBarServiceService {
 
   set isNavBarActive(value: boolean) {
     this._isNavBarActive = value;
+    this.isNavBarActiveSubject.next(value);  // Adicione esta linha
   }
   
+  private isNavBarActiveSubject = new BehaviorSubject<boolean>(false);
+  isNavBarActive$ = this.isNavBarActiveSubject.asObservable();
+
+  //Lógica abrir e fechar
+
   private isNavOpenSubject = new BehaviorSubject<boolean>(false);
   isNavOpen$ = this.isNavOpenSubject.asObservable();
 
-  private isNavBarActiveSubject = new BehaviorSubject<boolean>(false);
-  isNavBarActive$ = this.isNavBarActiveSubject.asObservable();
+
   toggleNav() {
     this.isNavOpenSubject.next(!this.isNavOpenSubject.value);
   }
+
   constructor() { }
 }
