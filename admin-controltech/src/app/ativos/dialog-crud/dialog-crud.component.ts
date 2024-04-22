@@ -22,7 +22,8 @@ export class DialogCrudComponent implements OnInit {
   dataMiddle: AtivoMiddle = {
     ativos: null,
     ativoFisico: null,
-    software: null
+    software: null,
+    usuario: null
   };
 
   formDataAtivo: Ativos = {    
@@ -46,8 +47,8 @@ export class DialogCrudComponent implements OnInit {
     id_user: 0,
     id_produto: 0,
   }
-  formDataUser: any = {
-    id: 1,
+  formDataUser: Users = {
+    id_user: 0,
     nome: '',
     login: '',
     user_password: '',
@@ -67,9 +68,10 @@ export class DialogCrudComponent implements OnInit {
   isAtivoFisico: boolean = false;
 
   dataToEnviar: AtivoMiddle = {
-    ativos: this.formDataAtivo,
-    ativoFisico: this.formDataFisico,
-    software: null
+    ativos: null,
+    ativoFisico: null,
+    software: null,
+    usuario: null
   }
   constructor(
     public dialogRef : MatDialogRef<DialogCrudComponent>,
@@ -103,9 +105,12 @@ export class DialogCrudComponent implements OnInit {
   }
 
   saveProduct(): void {
+
     this.dataToEnviar.ativos = this.formDataAtivo;
     this.dataToEnviar.ativoFisico = this.formDataFisico;
     this.dataToEnviar.software = this.formDataSoftware;
+    this.dataToEnviar.usuario = this.formDataUser;
+    console.log('Id usuario ' + this.dataToEnviar.usuario.id_user);
     
     this.dataMiddle.ativos = this.formDataAtivo;
     this.dataMiddle.ativoFisico = this.formDataFisico;

@@ -51,8 +51,8 @@
     <!-- Por exemplo: -->
   <mat-form-field appearance="fill">
     <mat-label>Responsavel</mat-label>
-    <mat-select [(ngModel)]="formDataFisico.id_usuario" required>
-      <mat-option *ngFor="let users of usuarios" [value]="users.id">{{ users.nome }}</mat-option>
+    <mat-select [(ngModel)]="formDataUser.id_user" required>
+      <mat-option *ngFor="let users of usuarios" [value]="users.id_user">{{ users.nome }}</mat-option>
     </mat-select>
   </mat-form-field>
   </div>
