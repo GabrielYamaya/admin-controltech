@@ -15,6 +15,7 @@ import { CardsComponent } from './ambientes/cards/cards.component';
 import { UsersService } from './services/users.service';
 import { LoginRoutingModule } from './login/login-routing.module';
 import { LoginComponentSuccessfulDialogComponent } from './components/login-component-successful-dialog/login-component-successful-dialog.component';
+import { LoginComponentFailDialogComponent } from './components/login-component-fail-dialog/login-component-fail-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { LoginComponentSuccessfulDialogComponent } from './components/login-comp
     AmbientesComponent,
     CardsComponent,
     LoginComponentSuccessfulDialogComponent,
+    LoginComponentFailDialogComponent,
   ],
   imports: [
     BrowserModule,
