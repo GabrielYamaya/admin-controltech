@@ -14,12 +14,14 @@ import { AmbientesComponent } from './ambientes/ambientes/ambientes.component';
 import { CardsComponent } from './ambientes/cards/cards.component';
 import { UsersService } from './services/users.service';
 import { LoginRoutingModule } from './login/login-routing.module';
+import { LoginComponentSuccessfulDialogComponent } from './components/login-component-successful-dialog/login-component-successful-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     AmbientesComponent,
     CardsComponent,
+    LoginComponentSuccessfulDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,19 +2,21 @@
     <div class="login-container">
         <h1>ControlTech</h1>
         <h2>Login</h2>
-        <form>
+        <form #loginForm="ngForm" (ngSubmit)="loginButton()">
             <mat-form-field>
                 <mat-label>Usuário</mat-label>
-                <input matInput type="text" id="username" name="username" required>
+                <input matInput type="text" id="login" name="login" required
+                [(ngModel)]="formDataUser.login" #login="ngModel">
             </mat-form-field>
     
             <mat-form-field>
                 <mat-label>Senha</mat-label>
-                <input matInput type="password" id="password" name="password" required>
+                <input matInput type="password" id="password" name="password" required
+                [(ngModel)]="formDataUser.user_password" #password="ngModel">
             </mat-form-field>
-    
+
             <button mat-raised-button color="primary" type="submit">Login</button>
-            <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+            <button mat-raised-button color="primary" type="button" (click)="redirectToCadastro()">Cadastrar</button>
         </form>
     </div>
     <div class="contentImg">
