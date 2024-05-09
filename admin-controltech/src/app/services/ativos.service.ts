@@ -15,6 +15,7 @@ export class AtivosService {
   
   getAtivos(): Observable<any[]> {
     this.baseUrl = this.baseUrl + "ativos/all"
+    console.log(this.baseUrl);
     return this.http.get<any[]>(this.baseUrl);
   }
 
