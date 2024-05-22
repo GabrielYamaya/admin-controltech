@@ -23,4 +23,6 @@ export class CadastrarComponent {
     private userService: UsersService
   ) {}
 
+  cadastrarButton(): void{}
+
 }

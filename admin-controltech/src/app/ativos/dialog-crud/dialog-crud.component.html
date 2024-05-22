@@ -33,13 +33,19 @@
       <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</mat-option>
     </mat-select>
   </mat-form-field>
-
+  <mat-form-field appearance="fill">
+    <mat-label>Local Armazenado</mat-label>
+    <mat-select [(ngModel)]="formDataLocal" required>
+      <mat-option *ngFor="let local of locais" [value]="local">{{ local.nomelocal }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
   <!-- Outros campos comuns aqui... -->
 
   <!-- Caixa de seleção para escolher o tipo de produto -->
   <mat-form-field appearance="fill">
     <mat-label>Tipo de Produto</mat-label>
-    <mat-select [(ngModel)]="selectedType" required>
+    <mat-select [(ngModel)]="selectedType" (ngModelChange)="updateSelectedType($event)" required>
       <mat-option value="ativoFisico">Ativo Físico</mat-option>
       <mat-option value="software">Software</mat-option>
     </mat-select>

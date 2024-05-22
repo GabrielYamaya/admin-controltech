@@ -22,6 +22,9 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { LoginComponentSuccessfulDialogComponent } from './components/login-component-successful-dialog/login-component-successful-dialog.component';
 import { LoginComponentFailDialogComponent } from './components/login-component-fail-dialog/login-component-fail-dialog.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LocaisService } from './services/locais.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,15 +47,17 @@ import { LoginComponentFailDialogComponent } from './components/login-component-
     MatCardModule,
     BrowserAnimationsModule,
     FormsModule, // Add FormsModule here
-    MatInputModule
-    
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
     CategoriaServiceService,
     AtivosService,
-    UsersService
+    UsersService,
+    LocaisService
   ],
   bootstrap: [AppComponent]
 })

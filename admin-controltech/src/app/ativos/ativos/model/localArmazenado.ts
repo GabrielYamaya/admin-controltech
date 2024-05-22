@@ -1,7 +1,9 @@
+import { SubLocal } from "./sublocal";
+
 export interface LocalArmazenado {
     id: number;
-    nomeLocal: string;
+    nomelocal: string;
     endereco: string;
     descricao: string;
-    subLocal: number;
+    subLocal: SubLocal | null;
   }

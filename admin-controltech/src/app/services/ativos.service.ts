@@ -13,6 +13,7 @@ export class AtivosService {
   private urlSendFisico: string = "http://localhost:8080/ativofisico/cadastrarTeste";
   private urlativos: string = "http://localhost:8080/ativos/cadastrar"
 
+  private urlSendSoftware: string = "http://localhost:8080/software/cadastrarTeste"
   constructor(private http: HttpClient) { }
   
   getAtivos(): Observable<any[]> {
@@ -28,7 +29,7 @@ export class AtivosService {
   }
   saveSoftware(formData: AtivoMiddle): Observable<AtivoMiddle> {
 
-    return this.http.post<any>(this.baseUrl,formData)
+    return this.http.post<any>(this.urlSendSoftware,formData)
   }
 
   saveAtivos(formdata: Ativos): Observable<Ativos>{
@@ -42,5 +43,9 @@ export class AtivosService {
   getSoftwareByAtivoName(ativoName: string): Observable<Software> {
     const url = `${this.baseUrl}software/by-ativo-name/${ativoName}`;
     return this.http.get<Software>(url);
+  }
+  searchSoftwareByName(value: string): Observable<Software[]> {
+    const url = `${this.baseUrl}software/by-ativo-name/${value}`;
+    return this.http.get<Software[]>(url);
   }
 }

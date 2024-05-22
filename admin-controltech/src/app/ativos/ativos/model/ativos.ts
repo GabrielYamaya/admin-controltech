@@ -1,3 +1,5 @@
+import { LocalArmazenado } from "./localArmazenado";
+
 export interface Ativos {
     id: number | null;
     nome: string;
@@ -6,5 +8,5 @@ export interface Ativos {
     data_aquisicao: Date | any;
     statusAtivo: string;
     descricao: string;
-    idLocalArmazenado: number;
+    localArmazenado: LocalArmazenado | null;
 }
