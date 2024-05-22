@@ -14,12 +14,19 @@ import { AmbientesComponent } from './ambientes/ambientes/ambientes.component';
 import { CardsComponent } from './ambientes/cards/cards.component';
 import { UsersService } from './services/users.service';
 import { LoginRoutingModule } from './login/login-routing.module';
+import { LicencasComponent } from './licencas/licencas.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     AmbientesComponent,
     CardsComponent,
+    LicencasComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,11 @@ import { LoginRoutingModule } from './login/login-routing.module';
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatCardModule,
+    BrowserAnimationsModule,
+    FormsModule, // Add FormsModule here
+    MatInputModule
     
   ],
   providers: [

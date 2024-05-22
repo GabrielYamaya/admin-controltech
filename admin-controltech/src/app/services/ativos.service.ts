@@ -3,6 +3,8 @@ import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ativos } from '../ativos/ativos/model/ativos';
 import { AtivoMiddle } from '../ativos/ativos/model/ativoMiddle';
+import { Licenca } from '../ativos/ativos/model/licenca';
+import { Software } from '../ativos/ativos/model/software';
 @Injectable({
   providedIn: 'root'
 })
@@ -31,5 +33,13 @@ export class AtivosService {
   saveAtivos(formdata: Ativos): Observable<Ativos>{
 
     return this.http.post<Ativos>(this.urlativos,formdata)
+  }
+  getSoftwareLicenses(software: number): Observable<Licenca[]> {
+    const url = `${this.baseUrl}software/licenses/${software}`;
+    return this.http.get<Licenca[]>(url);
+  }
+  getSoftwareByAtivoName(ativoName: string): Observable<Software> {
+    const url = `${this.baseUrl}software/by-ativo-name/${ativoName}`;
+    return this.http.get<Software>(url);
   }
 }
