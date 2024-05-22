@@ -1,17 +1,36 @@
-<div class="cadastrar-container">
-    <h1>ControlTech</h1>
-    <h2>Cadastro</h2>
-    <form>
-        <mat-form-field>
-            <mat-label>Usuário</mat-label>
-            <input matInput type="text" id="username" name="username" required>
-        </mat-form-field>
+<div class="contentPage">
+    <div class="Cadastrar-container">
+        <h1>ControlTech</h1>
+        <h2>Cadastrar</h2>
+        <form #signForm="ngForm" (ngSubmit)="cadastrarButton()">
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput type="text" id="nome" name="nome" required
+                [(ngModel)]="formDataUser.nome" #login="ngModel">
+            </mat-form-field>
 
-        <mat-form-field>
-            <mat-label>Senha</mat-label>
-            <input matInput type="password" id="password" name="password" required>
-        </mat-form-field>
+            <mat-form-field>
+                <mat-label>Usuário</mat-label>
+                <input matInput type="text" id="login" name="login" required
+                [(ngModel)]="formDataUser.login" #login="ngModel">
+            </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit">Cadastrar</button>
-    </form>
+            <mat-form-field>
+                <mat-label>Endereço</mat-label>
+                <input matInput type="text" id="endereco" name="endereco" required
+                [(ngModel)]="formDataUser.endereco" #login="ngModel">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" id="password" name="password" required
+                [(ngModel)]="formDataUser.user_password" #password="ngModel">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <div class="contentImg">
+
+    </div>
 </div>

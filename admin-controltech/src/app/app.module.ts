@@ -20,6 +20,8 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { LoginComponentSuccessfulDialogComponent } from './components/login-component-successful-dialog/login-component-successful-dialog.component';
+import { LoginComponentFailDialogComponent } from './components/login-component-fail-dialog/login-component-fail-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { MatInputModule } from '@angular/material/input';
     AmbientesComponent,
     CardsComponent,
     LicencasComponent,
+    LoginComponentSuccessfulDialogComponent,
+    LoginComponentFailDialogComponent,
   ],
   imports: [
     BrowserModule,

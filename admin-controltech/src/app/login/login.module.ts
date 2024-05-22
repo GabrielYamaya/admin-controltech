@@ -8,7 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    FormsModule
   ]
 })
 export class LoginModule { }
