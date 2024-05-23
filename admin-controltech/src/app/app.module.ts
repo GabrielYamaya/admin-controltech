@@ -46,7 +46,7 @@ import { LocaisService } from './services/locais.service';
     MatFormFieldModule,
     MatCardModule,
     BrowserAnimationsModule,
-    FormsModule, // Add FormsModule here
+    FormsModule, 
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule

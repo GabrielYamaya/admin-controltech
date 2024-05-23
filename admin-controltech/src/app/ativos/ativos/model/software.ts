@@ -1,4 +1,5 @@
 import { Ativos } from "./ativos";
+import { Licenca } from "./licenca";
 
 export interface Software {
     id_software: number;
@@ -6,5 +7,6 @@ export interface Software {
     data_expira: Date;
     n_licenca: string;
     tipo_OS: string;
-    id_produto: Ativos;
+    produto: Ativos;
+    licencas: Licenca[];
   }
