@@ -12,6 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms'; // Importe o FormsModule
 import {MatSelectModule} from '@angular/material/select';
+import { AppModule } from '../app.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatDatepickerModule,
     FormsModule,
     MatSelectModule
+  ],
+  exports: [
+    AppModule
   ]
 })
 export class AtivosModule { }

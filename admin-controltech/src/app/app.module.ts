@@ -25,6 +25,10 @@ import { LoginComponentFailDialogComponent } from './components/login-component-
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocaisService } from './services/locais.service';
+import { DialogCrudLicenceComponent } from './licencas/dialog-crud-licence/dialog-crud-licence.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +38,7 @@ import { LocaisService } from './services/locais.service';
     LicencasComponent,
     LoginComponentSuccessfulDialogComponent,
     LoginComponentFailDialogComponent,
+    DialogCrudLicenceComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,10 @@ import { LocaisService } from './services/locais.service';
     FormsModule, 
     MatInputModule,
     MatAutocompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatSelectModule
   ],
   providers: [
     provideClientHydration(),

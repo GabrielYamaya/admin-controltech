@@ -50,4 +50,15 @@ export class AtivosService {
       tap(data => console.log('Retorno da requisição:', data))
     );
   }
+  saveLicenca(formDataLicenca: Licenca): Observable<Licenca> {
+    const url = `${this.baseUrl}licenca/cadastrar`;
+    return this.http.post<Licenca>(url,formDataLicenca)
+  }
+
+  getAllSoftware(): Observable<Software[]> {
+    const url = `${this.baseUrl}software/all`;
+    return this.http.get<Software[]>(url);
+
+  }
+  
 }

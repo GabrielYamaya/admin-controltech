@@ -5,6 +5,6 @@ export interface Licenca {
     id_licenca: number;
     chave: string;
     observacoes: string;
-    software: Software;
-    usuario: Users;
+    software: Software | null;
+    usuario: Users | null;
 }

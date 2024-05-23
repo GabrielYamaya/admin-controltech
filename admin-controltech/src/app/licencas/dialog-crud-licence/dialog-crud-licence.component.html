@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Licença</mat-label>
+    <input matInput placeholder="Chave" [(ngModel)]="formDataLicenca.chave" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Observações</mat-label>
+    <input matInput placeholder="Obs" [(ngModel)]="formDataLicenca.observacoes" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Software</mat-label>
+    <mat-select [(ngModel)]="formDataSoftware" required>
+      <mat-option *ngFor="let software of softwares" [value]="software">{{ software.produto.nome }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Responsavel</mat-label>
+    <mat-select [(ngModel)]="formDataUser" required>
+      <mat-option *ngFor="let users of usuarios" [value]="users">{{ users.nome }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+<div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Fechar</button>
+    <button mat-raised-button color="primary" (click)="saveLicenca()">Salvar</button>
+</div>

@@ -5,6 +5,9 @@ import { FormControl } from '@angular/forms';
 import { map, startWith, switchMap, filter } from 'rxjs/operators';
 import { Software } from '../ativos/ativos/model/software';
 import { Observable } from 'rxjs';
+import { DialogCrudComponent } from '../ativos/dialog-crud/dialog-crud.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogCrudLicenceComponent } from './dialog-crud-licence/dialog-crud-licence.component';
 
 @Component({
   selector: 'app-licencas',
@@ -18,7 +21,21 @@ export class LicencasComponent implements OnInit {
 
   licencas: Licenca[] = [];
 
-  constructor(private ativoService: AtivosService){ }
+  constructor(private ativoService: AtivosService, public dialog: MatDialog){ }
+
+  openLicencaDialog(): void {
+    console.log('Abrindo o diálogo...');
+    const dialogRef = this.dialog.open(DialogCrudLicenceComponent, {
+      width: '800px',
+      data: {
+        title: 'Cadastro de Ativo'
+      }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Diálogo fechado com resultado:', result);
+    });
+  }
 
   ngOnInit(): void {
     this.filteredSoftwares = this.softwareControl.valueChanges.pipe(
