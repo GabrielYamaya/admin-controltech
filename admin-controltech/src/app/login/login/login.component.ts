@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Users } from '../../ativos/ativos/model/users';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponentSuccessfulDialogComponent } from '../../components/login-component-successful-dialog/login-component-successful-dialog.component';
@@ -10,7 +10,7 @@ import { error } from 'node:console';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
+export class LoginComponent  {
   usuarioAuth: Users | null = null;
   loginSucess: boolean = false;
 
@@ -30,21 +30,22 @@ export class LoginComponent {
 
   async loginButton() {
     try {
-        await this.fetchUser();
-        if (this.formDataUser.login === this.usuarioAuth?.login && this.formDataUser.user_password === this.usuarioAuth.user_password) {
-            console.log('Usuário autenticado com sucesso!');
-            this.openSuccessDialog();
-            setTimeout(() => {
-                window.location.href = '/ativos';
-            }, 2000);
-        } 
-    } catch (error) {
+      await this.fetchUser();
+
+      if (this.usuarioAuth && this.formDataUser.login === this.usuarioAuth.login && 
+        this.formDataUser.user_password === this.usuarioAuth.user_password) {
+        console.log('Usuário autenticado com sucesso!');
+        this.openSuccessDialog();
+        setTimeout(() => {
+          window.location.href = '/ativos';
+        }, 2000);
+      } else {
+        console.log('Credenciais inválidas.');
         this.openFailDialog();
-              setTimeout(() => {
-                  location.reload();
-              }, 2000);
+      }
+    } catch (error) {
         console.error('Erro ao realizar login:', error);
-        // Tratar o erro conforme necessário
+        this.openFailDialog();
     }
 }
 

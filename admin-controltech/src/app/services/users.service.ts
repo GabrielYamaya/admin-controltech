@@ -13,14 +13,14 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any[]> {
-    this.baseUrl = this.baseUrl + "/all"
-    return this.http.get<any[]>(this.baseUrl);
+    const url = this.baseUrl + "/all"
+    return this.http.get<any[]>(url);
   }
 
-  getUserByUsername(username: string): Observable<Users> {
-    const url = `${this.baseUrl}/findbylogin?login=${username}`; // Passando o parâmetro na query string
+  getUserByUsername(login: string): Observable<Users> {
+    const url = `${this.baseUrl}/findbylogin?login=${login}`; // Passando o parâmetro na query string corretamente
     console.log(url);
-    return this.http.get<any>(url);
+    return this.http.get<Users>(url);
   }
 
   login(usuario: Users): Observable<any> {
@@ -30,7 +30,7 @@ export class UsersService {
   }
 
   register(user: Users): Observable<any> {
-    const url = `${this.baseUrl}/register`;
+    const url = `${this.baseUrl}/cadastro`;
     return this.http.post<any>(url, user);
   }
 }
