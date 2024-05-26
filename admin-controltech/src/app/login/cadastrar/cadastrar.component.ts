@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Users } from '../../ativos/ativos/model/users';
 import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from '../../services/users.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-cadastrar',
@@ -23,6 +24,12 @@ export class CadastrarComponent {
     private userService: UsersService
   ) {}
 
-  cadastrarButton(): void{}
+  cadastrarButton(): void{
+    this.userService.register(this.formDataUser).subscribe(
+      response => {
+        console.log("Cadastrou o cara", response);
+      }
+    )
+  }
 
 }

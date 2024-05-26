@@ -34,7 +34,6 @@ import { AppModule } from '../app.module';
     MatSelectModule
   ],
   exports: [
-    AppModule
   ]
 })
 export class AtivosModule { }

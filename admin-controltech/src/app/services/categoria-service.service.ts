@@ -6,7 +6,7 @@ import { Categoria } from '../ativos/ativos/model/categoria';
   providedIn: 'root'
 })
 export class CategoriaServiceService {
-  private baseUrl: string = "http://localhost:8080/categoria";
+  private baseUrl: string = "https://controltech-backend.azurewebsites.net/categoria";
 
   constructor(private http: HttpClient) { }
   getCategorias(): Observable<any[]> {

@@ -9,10 +9,10 @@ import { Software } from '../ativos/ativos/model/software';
   providedIn: 'root'
 })
 export class AtivosService {
-  private baseUrl: string = "http://localhost:8080/";
-  private urlSendFisico: string = "http://localhost:8080/ativofisico/cadastrarTeste";
-  private urlativos: string = "http://localhost:8080/ativos/cadastrar"
-  private urlSendSoftware: string = "http://localhost:8080/software/cadastrarTeste"
+  private baseUrl: string = "https://controltech-backend.azurewebsites.net/";
+  private urlSendFisico: string = "https://controltech-backend.azurewebsites.net/cadastrarTeste";
+  private urlativos: string = "https://controltech-backend.azurewebsites.net/ativos/cadastrar"
+  private urlSendSoftware: string = "https://controltech-backend.azurewebsites.net/software/cadastrarTeste"
   constructor(private http: HttpClient) {
    }
   

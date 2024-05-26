@@ -8,7 +8,7 @@ import { Users } from '../ativos/ativos/model/users';
 })
 export class UsersService {
 
-  private baseUrl: string = "http://localhost:8080/users";
+  private baseUrl: string = "https://controltech-backend.azurewebsites.net/users";
 
   constructor(private http: HttpClient) { }
 

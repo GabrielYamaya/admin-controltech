@@ -6,5 +6,5 @@ export interface Licenca {
     chave: string;
     observacoes: string;
     software: Software | null;
-    usuario: Users | null;
+    usuario: Users;
 }

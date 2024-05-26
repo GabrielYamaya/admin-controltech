@@ -18,13 +18,6 @@ export class DialogCrudLicenceComponent implements OnInit {
   usuarios: Users[] = [];
   softwares: Software[] = [];
 
-  formDataLicenca: Licenca = {
-    id_licenca: 0,
-    chave: '',
-    observacoes: '',
-    software: null,
-    usuario: null
-  }
 
   formDataSoftware: any = {
     id: 1,
@@ -41,6 +34,14 @@ export class DialogCrudLicenceComponent implements OnInit {
     user_password: '',
     endereco: ''
   };
+
+  formDataLicenca: Licenca = {
+    id_licenca: 0,
+    chave: '',
+    observacoes: '',
+    software: null,
+    usuario: this.formDataUser
+  }
 
   constructor(    
     public dialogRef : MatDialogRef<DialogCrudComponent>,
